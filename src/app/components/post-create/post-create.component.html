@@ -1,0 +1,18 @@
+<hr>
+
+<!-- Property Binding -->
+<!-- # Is the LocalReference -->
+<!-- <textarea rows="10" [value]="newPost" #newPostInput ></textarea> -->
+<!-- Property Binding -->
+
+
+<textarea rows="10" [(ngModel)] = "enteredValue"  ></textarea>
+<hr>
+
+<!-- Event Binding -->
+<button (click)="showAlert()">Save Post</button>
+<!-- Event Binding -->
+
+<!-- String Interpolation -->
+<p>{{newPost}}</p>
+<!-- String Interpolation -->
