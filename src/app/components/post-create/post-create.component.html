@@ -1,18 +1,41 @@
-<hr>
 
 <!-- Property Binding -->
 <!-- # Is the LocalReference -->
 <!-- <textarea rows="10" [value]="newPost" #newPostInput ></textarea> -->
 <!-- Property Binding -->
 
+<!-- Two way Binding -->
 
-<textarea rows="10" [(ngModel)] = "enteredValue"  ></textarea>
-<hr>
+<mat-card>
+
+  <form (submit)="showAlert(postOfForm)" #postOfForm = "ngForm">
+    <mat-form-field>
+
+        <input matInput placeholder="Enter your Title" type="text" [(ngModel)] = "enteredTitle" class="form-control"
+        required minlength="4" name = "title" #postTitle = "ngModel"
+        />
+        <mat-error *ngIf="postTitle.invalid">Invalid Title</mat-error>
+
+      </mat-form-field>
+
+  <mat-form-field>
+
+    <textarea placeholder="Enter your Message" matInput rows="3" [(ngModel)] = "enteredMessage"
+    required minlength="10"  name = "messageEntered" #postMessage = "ngModel"
+    ></textarea>
+    <mat-error *ngIf="postMessage.invalid">Invalid Message</mat-error>
+
+  </mat-form-field>
+
 
 <!-- Event Binding -->
-<button (click)="showAlert()">Save Post</button>
+<button mat-raised-button color="accent" type="submit">Save Post</button>
 <!-- Event Binding -->
+
+</form>
+
+</mat-card>
 
 <!-- String Interpolation -->
-<p>{{newPost}}</p>
+<!-- <p>{{newPost}}</p> -->
 <!-- String Interpolation -->

@@ -1,5 +1,10 @@
 <!-- String Interpolation -->
-Welcome to {{ title }}!
+<!-- Welcome to {{ title }}! -->
 <!-- String Interpolation -->
-<app-post-create></app-post-create>
-
+<app-header></app-header>
+<main>
+<!-- <app-post-create (postCreated) = "onPostAdded($event)"></app-post-create> -->
+<app-post-create ></app-post-create>
+<!-- <app-post-list [posts]="postsStored"></app-post-list> -->
+<app-post-list ></app-post-list>
+</main>
