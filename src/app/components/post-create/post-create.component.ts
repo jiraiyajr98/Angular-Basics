@@ -38,6 +38,8 @@ export class PostCreateComponent implements OnInit {
     // this.postCreated.emit(post);
     this.postService.addPost(post);
 
+    form.resetForm();
+
 
   }
 
